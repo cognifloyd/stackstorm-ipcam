@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from tempfile import NamedTemporaryFile
 
 import requests
@@ -16,7 +18,7 @@ class CaptureScreenshotAction(Action):
         return result
 
     def _capture_screenshot(self, capture_url):
-        print capture_url
+        print(capture_url)
         response = requests.get(capture_url)
 
         # pylint: disable=no-member
